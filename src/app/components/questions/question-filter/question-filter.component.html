@@ -1,0 +1,6 @@
+    <div *ngIf="question.style.format == 'box'">
+        <app-box-style [question]=question  (results)="resultHandler($event)"></app-box-style>
+    </div>
+    <div *ngIf="question.style.format == 'list'">
+        <app-list-style  [question]=question  (results)="resultHandler($event)"></app-list-style>
+    </div>

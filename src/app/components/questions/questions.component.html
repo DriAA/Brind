@@ -1,0 +1,6 @@
+
+<div style="background-color: #F0E9D2; height: 100vh;">
+    <app-question-counter *ngIf="!areQuestionsCompleted" [questions]="quesitonSet" (answer)="handleAnswers($event)"></app-question-counter>    
+    <app-results *ngIf="areQuestionsCompleted" [results]="results"></app-results>    
+</div>
+

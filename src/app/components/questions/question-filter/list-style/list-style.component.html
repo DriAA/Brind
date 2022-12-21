@@ -1,0 +1,21 @@
+<div [ngClass]="show? 'animate__fadeInLeft': 'animate__fadeOutRight'" class="text-center p-5 animate__animated animate__faster" [style.backgroundColor]=question.style.backgroundColor >
+    <div class="w-75 m-auto">
+    <!-- Header -->
+    <section class="mb-5">
+        <h1>
+            {{ question.title }}
+        </h1>
+        <h5 class="text-muted">
+            {{ question.description }}
+        </h5>
+    </section>
+    <!-- Body-->
+    <section class="my-2" *ngFor="let option of question.options" (click)=handleSelected(option)>
+        <button mat-flat-button class="w-100 py-3 my-3" [style.filter]="currentlySelected(option)">{{ option.name }}</button>
+    </section>
+    <!-- Footer -->
+    <section class="my-5 pt-5">
+        <button mat-flat-button class="w-100 py-3" (click)="sendAnswer()" [disabled]="!optionSelected ? true : null"> Next </button>
+    </section>
+    </div>
+</div>
