@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userDB = require('../mock/users.json')
+const userDB = require('../mock/users.mock.json')
 let mysql = require('mysql');
 const ENV = require('../enviroment.json')
 function errorGeneratorFormat(error, msg, status) {

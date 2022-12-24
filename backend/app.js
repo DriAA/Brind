@@ -9,8 +9,6 @@ swaggerDocument = require('./swagger.json');
 const userRoute=require('./routes/users.routes')
 const questionRoute=require('./routes/questions.routes')
 
-const userDB = require('./mock/users.json')
-
 
 // Routes
 
